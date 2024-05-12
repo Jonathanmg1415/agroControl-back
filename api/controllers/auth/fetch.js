@@ -51,10 +51,7 @@ module.exports = {
         throw 'badToken';
       }
 
-      // Obtener los links
-      const links = await sails.helpers.auth.generateMenulinks(
-        userRecord.email
-      );
+
 
       //return the token here
       return {
@@ -67,7 +64,6 @@ module.exports = {
             user: {
               data: userRecord,
             },
-            links: links,
             token: '',
           },
         },

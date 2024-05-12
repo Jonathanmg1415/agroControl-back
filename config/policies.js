@@ -18,5 +18,6 @@ module.exports.policies = {
   ***************************************************************************/
 
   '*': 'auth/isAuth',
-
+  'auth/login': 'auth/okLogin',
+  'auth/fetch': 'auth/okFetch',
 };

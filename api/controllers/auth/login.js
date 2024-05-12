@@ -40,6 +40,7 @@ password attempt.`,
 
   fn: async function ({ email, password }) {
 
+
     sails.log.debug('action login');
     // Look up by the email address.
     // (note that we lowercase it to ensure the lookup is always case-insensitive,
@@ -48,7 +49,6 @@ password attempt.`,
       var userRecord = await User.findOne({
         email: email.toLowerCase(),
       });
-
       sails.log.debug('userRecord', userRecord);
       // If there was no matching user, respond thru the "badCombo" exit.
       if (!userRecord) {
@@ -82,16 +82,6 @@ password attempt.`,
 
       sails.log.debug('generateNewJwtToken OK');
 
-      // Obtener los links
-      const links = await sails.helpers.auth.generateMenulinks(
-        userRecord.email
-      );
-
-      sails.log.debug('generateMenulinks OK');
-
-      await sails.helpers.auth.updateUserLastSeenAt(userRecord);
-
-      sails.log.debug('updateUserLastSeenAt OK');
 
       //return the token here
       return {
@@ -104,7 +94,6 @@ password attempt.`,
             user: {
               data: userRecord,
             },
-            links: links,
             token: token,
             dominios: ['admin.isimony.com'],
           },

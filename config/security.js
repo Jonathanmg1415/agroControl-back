@@ -33,6 +33,7 @@ module.exports.security = {
     allowOrigins: 'http://localhost:8000',
     allowCredentials: true,
     allowRequestHeaders: 'content-type, authorization',
+    allowResponseHeaders: 'content-disposition',
   },
 
 

@@ -29,9 +29,7 @@ function addGlobalPrefix(routes) {
 }
 
 module.exports.routes = addGlobalPrefix({
-
-  //Ejemplo de ruta para el consumo del FrontEnd
-  'GET /ejemplonombrepersonalizado': { action: 'nombrearchivo/controlador'}
-
+  'GET /fetch': { action: 'auth/fetch' },
+  'POST /login': { action: 'auth/login' },
 
 });
