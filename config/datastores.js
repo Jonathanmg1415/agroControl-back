@@ -58,7 +58,7 @@ module.exports.datastores = {
 
   agrocontroldb: {
     adapter: 'sails-mysql',
-    url: 'mysql://agrocontroldba:adminagrocontrol@localhost:3306/agrocontrol',
+    url: 'mysql://agrocontroldba:AdminAgrontrol7699*@localhost:3306/agrocontrol',
     timezone: '+0',
   }
 };
