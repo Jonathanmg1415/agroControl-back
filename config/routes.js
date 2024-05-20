@@ -42,4 +42,5 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /egresos': { action: 'gestion-egresos/listar-egresos' },
+  'GET /egresos/exportar': { action: 'gestion-egresos/exportar-egresos'},
 });
