@@ -52,6 +52,7 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /ingresos': { action: 'gestion-ingresos/listar-ingresos' },
+  'GET /ingresos/crear': { action: 'gestion-ingresos/crear-ingresos' },
 
   /*
    * Rutas para las acciones de las estadisticas
@@ -69,5 +70,7 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /productos': { action: 'gestion-productos/listar-productos'},
-  'POST /productos/agregar': { action: 'gestion-productos/agregar-producto'}
+  'POST /productos/agregar': { action: 'gestion-productos/agregar-producto'},
+  'GET /productos/consulta': { action: 'gestion-productos/consultar-producto' },
+  'PUT /productos/actualizar': { action: 'gestion-productos/editar-producto' },
 });
