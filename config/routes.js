@@ -43,6 +43,7 @@ module.exports.routes = addGlobalPrefix({
 
   'GET /egresos': { action: 'gestion-egresos/listar-egresos' },
   'GET /egresos/exportar': { action: 'gestion-egresos/exportar-egresos'},
+  'POST /egresos/guardar': { action: 'gestion-egresos/guardar-egresos'},
 
   /*
    * Rutas para las acciones de los ingresos
@@ -50,6 +51,16 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /ingresos': { action: 'gestion-ingresos/listar-ingresos' },
+
+  /*
+   * Rutas para las acciones de las estadisticas
+   *
+   */
+
+  'GET /estadisticas/ingresos-egresos-mes': { action: 'gestion-estadisticas/consultar-ingresos-egresos-mes' },
+
+  'GET /estadisticas/movimientos-ultimo-mes': { action: 'gestion-estadisticas/consultar-movimientos-ultimo-mes' },
+
 
   /*
    * Rutas para las acciones de los productos
