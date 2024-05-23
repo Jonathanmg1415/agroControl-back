@@ -51,6 +51,7 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /ingresos': { action: 'gestion-ingresos/listar-ingresos' },
+  'GET /ingresos/crear': { action: 'gestion-ingresos/crear-ingresos' },
 
   /*
    * Rutas para las acciones de las estadisticas
