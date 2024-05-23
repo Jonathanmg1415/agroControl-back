@@ -23,7 +23,7 @@ module.exports = {
     try {
       // Obtener la fecha de hace 30 días
       const fechaInicial = new Date();
-      fechaInicial.setDate(fechaInicial.getDate() - 10);
+      fechaInicial.setDate(fechaInicial.getDate() - 30);
 
       // Consulta para obtener los ingresos de los últimos 30 días
       const ingresos = await sails.models.ingresos.find({
