@@ -50,4 +50,11 @@ module.exports.routes = addGlobalPrefix({
    */
 
   'GET /ingresos': { action: 'gestion-ingresos/listar-ingresos' },
+
+  /*
+   * Rutas para las acciones de los ingresos
+   *
+   */
+
+  'GET /productos': { action: 'gestion-productos/listar-productos'},
 });
